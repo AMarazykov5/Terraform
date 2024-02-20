@@ -137,6 +137,6 @@ resource "aws_db_instance" "mysql" {
   username              = var.db_username
   password              = var.db_password
   skip_final_snapshot   = true
-# vpc_security_group_ids = [aws_security_group.rds_sg.id]
+  vpc_security_group_ids = [aws_security_group.rds_sg.id]
   db_subnet_group_name  = aws_db_subnet_group.wordpress_db_subnet_group.name
 }
